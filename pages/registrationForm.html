@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации на конференцию</title>
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/registrationForm.css">
+    <script src="../js/validate.js"></script>
+    
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="../pages/registrationForm.html">Регистрация участников</a></li>
+            <li><a href="../pages/registered_users.php">Участники</a></li>
+            <li><a href="../phpmyadmin/index.php">PHPMyAdmin</a></li>
+            <li><a href="../pages/photoGallery.html">Фотогалерея</a></li>
+            <li><a href="../pages/messages.php">Минитвитер</a></li>
+            <li><a href="../pages/test.html">Тест</a></li>
+            <li><a href="../pages/about.html">О сайте</a></li>
+        </ul>
+    </nav>
+    <h1>Регистрация на конференцию</h1>
+    <form action="../db/process_registation.php" method="post" onsubmit="return validateForm()">
+        <div>
+            <label for="fullName">Имя:</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div>
+            <label for="phone">Телефон:</label>
+            <input type="text" id="phone" name="phone" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="section">Секция конференции:</label>
+            <select id="section" name="section" required>
+                <option value="Математика">Математика</option>
+                <option value="Физика">Физика</option>
+                <option value="Информатика">Информатика</option>
+            </select>
+        </div>
+        <div>
+            <label for="dob">Дата рождения:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+        <div>
+            <label>Доклад:
+                <input type="radio" id="yes" name="presentation" value="Да">
+                <label for="Да">Да</label>
+                <input type="radio" id="no" name="presentation" value="Нет">
+                <label for="Нет">Нет</label>
+            </label>
+        </div>
+        <div id="topicField" style="display: none;">
+            <label for="topic">Тема доклада:</label>
+            <input type="text" id="topic" name="topic">
+        </div>
+        <div>
+            <button type="submit">Зарегистрироваться</button>
+        </div>
+    </form>
+
+    
+
+</body>
+
+<script>
+    document.querySelector('input[name="presentation"]').addEventListener('change', function() {
+        if (this.value === 'Да') {
+            document.getElementById('topicField').style.display = 'block';
+        } 
+        else {
+            document.getElementById('topicField').style.display = 'none';
+        }
+    });
+</script>
+
+</html>

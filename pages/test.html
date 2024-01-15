@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по основам веб-программирования</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        ol {
+            list-style-type: none;
+            padding: 0;
+        }
+        label {
+            margin-left: 5px;
+        }
+        input[type="submit"] {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="../pages/registrationForm.html">Регистрация участников</a></li>
+            <li><a href="../pages/registered_users.php">Участники</a></li>
+            <li><a href="../phpmyadmin/index.php">PHPMyAdmin</a></li>
+            <li><a href="../pages/photoGallery.html">Фотогалерея</a></li>
+            <li><a href="../pages/messages.php">Минитвитер</a></li>
+            <li><a href="../pages/test.html">Тест</a></li>
+            <li><a href="../pages/about.html">О сайте</a></li>
+        </ul>
+    </nav>
+    <h1>Тест по основам веб-программирования</h1>
+    <form action="../db/check_test.php" method="post">
+        <ol>
+            <li>
+                <p>1. Что такое HTML?</p>
+                <input type="radio" id="html1" name="q1" value="a">
+                <label for="html1">Язык программирования</label><br>
+                <input type="radio" id="html2" name="q1" value="b">
+                <label for="html2">Гипертекстовая разметка</label><br>
+                <input type="radio" id="html3" name="q1" value="c">
+                <label for="html3">База данных</label><br>
+            </li>
+            <li>
+                <p>2. Какой элемент используется для создания ссылки в HTML?</p>
+                <input type="radio" id="link1" name="q2" value="a">
+                <label for="link1">&lt;a&gt;</label><br>
+                <input type="radio" id="link2" name="q2" value="b">
+                <label for="link2">&lt;link&gt;</label><br>
+                <input type="radio" id="link3" name="q2" value="c">
+                <label for="link3">&lt;href&gt;</label><br>
+            </li>
+            <li>
+                <p>3. Что означает CSS?</p>
+                <input type="radio" id="css1" name="q3" value="a">
+                <label for="css1">Cascading Style Sheets</label><br>
+                <input type="radio" id="css2" name="q3" value="b">
+                <label for="css2">Central Style Sheets</label><br>
+                <input type="radio" id="css3" name="q3" value="c">
+                <label for="css3">Creative Style Sheets</label><br>
+            </li>
+            <li>
+                <p>4. Что такое HTTP?</p>
+                <input type="radio" id="http1" name="q4" value="a">
+                <label for="http1">Hypertext Transfer Protocol</label><br>
+                <input type="radio" id="http2" name="q4" value="b">
+                <label for="http2">Hyperlink Text Transmission Protocol</label><br>
+                <input type="radio" id="http3" name="q4" value="c">
+                <label for="http3">Hypertext Typing Transfer Protocol</label><br>
+            </li>
+            <li>
+                <p>5. Какой тег используется для создания таблицы в HTML?</p>
+                <input type="radio" id="table1" name="q5" value="a">
+                <label for="table1">&lt;table&gt;</label><br>
+                <input type="radio" id="table2" name="q5" value="b">
+                <label for="table2">&lt;tab&gt;</label><br>
+                <input type="radio" id="table3" name="q5" value="c">
+                <label for="table3">&lt;tr&gt;</label><br>
+            </li>
+            <li>
+                <p>6. Что такое JavaScript?</p>
+                <input type="radio" id="js1" name="q6" value="a">
+                <label for="js1">Язык разметки</label><br>
+                <input type="radio" id="js2" name="q6" value="b">
+                <label for="js2">Язык программирования</label><br>
+                <input type="radio" id="js3" name="q6" value="c">
+                <label for="js3">Язык стилей</label><br>
+            </li>
+        </ol>
+        <input type="submit" value="Проверить ответы">
+    </form>
+</body>
+</html>
