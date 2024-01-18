@@ -24,11 +24,13 @@
       background-color: rgba(0, 0, 0, 0.5);
       padding: 10px;
       display: none;
+      height: 80px;
+      width: 250px;
     }
     
     .prevBtn {
-      left: 200px;
+      left: 320px;
     }
     .nextBtn {
-      right: 10px;
+      right: 320px;
     }
