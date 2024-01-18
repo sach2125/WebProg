@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фотогалерея</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/modalWindow.css">
+    <link rel="stylesheet" href="../css/photo.css">
+    <script src="../js/showPhoto.js"></script>
 </head>
 <body>
     <nav>
@@ -19,13 +22,15 @@
             <li><a href="../pages/about.html">О сайте</a></li>
         </ul>
     </nav>
-    <div class="gallery">
-        <div class="thumbnails"></div>
-        <div class="preview">
-            <img class="full-img" src="" alt="Preview Image">
-        </div>
-    </div>
+    <p>Добавлен фунционал Галереи: теперь при нажатии на картинку, покажется модальное окно с увеличенным размером картинки</p>
+    <div class="gallery" id="gallery">
 
-    <script src="../js/photo.js"></script>
-</body>
+    </div>
+    <!-- Модальное окно -->
+  <div id="modal" class="modal">
+    <img id="modal-image" class="modal-content" src="" alt="Увеличенная картинка">
+    <button id="prevBtn" onclick="prevImage()">Предыдущее</button>
+    <button id="nextBtn" onclick="nextImage()">Следующее</button>
+  </div>
+ </body>
 </html>
